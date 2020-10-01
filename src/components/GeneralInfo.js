@@ -20,7 +20,10 @@ export class GeneralInfo extends Component {
       <div>
         <h1>General Information</h1>
         {isEditing ? (
-          <p>Editing</p>
+          <form>
+            <input name="fullName" value={fullName} />
+            <button type="submit">Submit</button>
+          </form>
         ) : (
           <div>
             <p>{fullName}</p>
