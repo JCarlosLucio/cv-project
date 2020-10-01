@@ -9,6 +9,11 @@ export class EducationInfo extends Component {
       date: '2019',
       isEditing: false,
     };
+    this.toggleEdit = this.toggleEdit.bind(this);
+  }
+
+  toggleEdit() {
+    this.setState({ isEditing: !this.state.isEditing });
   }
 
   render() {
@@ -16,11 +21,16 @@ export class EducationInfo extends Component {
     return (
       <div>
         <h1>Education</h1>
-        <div>
-          <p>{school}</p>
-          <p>{title}</p>
-          <p>{date}</p>
-        </div>
+        {isEditing ? (
+          <p>Editing</p>
+        ) : (
+          <div>
+            <p>{school}</p>
+            <p>{title}</p>
+            <p>{date}</p>
+            <button onClick={this.toggleEdit}>Edit</button>
+          </div>
+        )}
       </div>
     );
   }
