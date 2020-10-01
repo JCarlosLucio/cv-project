@@ -6,6 +6,7 @@ export class GeneralInfo extends Component {
     this.state = {
       fullName: 'John Smith',
       email: 'smith@email.com',
+      phone: '01 800 123 4567',
       isEditing: false,
     };
     this.toggleEdit = this.toggleEdit.bind(this);
@@ -27,7 +28,7 @@ export class GeneralInfo extends Component {
   }
 
   render() {
-    const { fullName, email, isEditing } = this.state;
+    const { fullName, email, phone, isEditing } = this.state;
     return (
       <div>
         <h1>General Information</h1>
@@ -39,12 +40,14 @@ export class GeneralInfo extends Component {
               onChange={this.handleChange}
             />
             <input name="email" value={email} onChange={this.handleChange} />
+            <input name="phone" value={phone} onChange={this.handleChange} />
             <button type="submit">Submit</button>
           </form>
         ) : (
           <div>
             <p>{fullName}</p>
             <p>{email}</p>
+            <p>{phone}</p>
             <button onClick={this.toggleEdit}>Edit</button>
           </div>
         )}
