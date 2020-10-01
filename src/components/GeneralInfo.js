@@ -7,6 +7,11 @@ export class GeneralInfo extends Component {
       fullName: 'John',
       isEditing: false,
     };
+    this.toggleEdit = this.toggleEdit.bind(this);
+  }
+
+  toggleEdit() {
+    this.setState({ isEditing: !this.state.isEditing });
   }
 
   render() {
@@ -14,7 +19,14 @@ export class GeneralInfo extends Component {
     return (
       <div>
         <h1>General Information</h1>
-        {isEditing ? <p>Editing</p> : <p>{fullName}</p>}
+        {isEditing ? (
+          <p>Editing</p>
+        ) : (
+          <div>
+            <p>{fullName}</p>
+            <button onClick={this.toggleEdit}>Edit</button>
+          </div>
+        )}
       </div>
     );
   }
