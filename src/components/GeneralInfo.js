@@ -5,15 +5,16 @@ export class GeneralInfo extends Component {
     super(props);
     this.state = {
       fullName: 'John',
+      isEditing: false,
     };
   }
 
   render() {
-    const { fullName } = this.state;
+    const { fullName, isEditing } = this.state;
     return (
       <div>
         <h1>General Information</h1>
-        <p>{fullName}</p>
+        {isEditing ? <p>Editing</p> : <p>{fullName}</p>}
       </div>
     );
   }
