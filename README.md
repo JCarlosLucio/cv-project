@@ -1,3 +1,9 @@
+# PROJECT: CV APPLICATION
+from The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/cv-application)
+
+## Overview
+A small CV Application made with React.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
