@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GeneralInfoForm from './GeneralInfoForm';
 
 export class GeneralInfo extends Component {
   constructor(props) {
@@ -33,36 +34,13 @@ export class GeneralInfo extends Component {
       <div>
         <h1>General Information</h1>
         {isEditing ? (
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Name:
-              <input
-                name="fullName"
-                value={fullName}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <label>
-              Email:
-              <input
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <label>
-              Phone Number:
-              <input
-                name="phone"
-                value={phone}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <button type="submit">Submit</button>
-          </form>
+          <GeneralInfoForm
+            fullName={fullName}
+            email={email}
+            phone={phone}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+          />
         ) : (
           <div>
             <p>{fullName}</p>
