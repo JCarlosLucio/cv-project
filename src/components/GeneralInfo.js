@@ -9,10 +9,16 @@ export class GeneralInfo extends Component {
     };
     this.toggleEdit = this.toggleEdit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.toggleEdit();
   }
 
   toggleEdit() {
@@ -25,7 +31,7 @@ export class GeneralInfo extends Component {
       <div>
         <h1>General Information</h1>
         {isEditing ? (
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <input
               name="fullName"
               value={fullName}
