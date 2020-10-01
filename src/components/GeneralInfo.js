@@ -34,24 +34,33 @@ export class GeneralInfo extends Component {
         <h1>General Information</h1>
         {isEditing ? (
           <form onSubmit={this.handleSubmit}>
-            <input
-              name="fullName"
-              value={fullName}
-              onChange={this.handleChange}
-              required
-            />
-            <input
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-              required
-            />
-            <input
-              name="phone"
-              value={phone}
-              onChange={this.handleChange}
-              required
-            />
+            <label>
+              Name:
+              <input
+                name="fullName"
+                value={fullName}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
+            <label>
+              Email:
+              <input
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
+            <label>
+              Phone Number:
+              <input
+                name="phone"
+                value={phone}
+                onChange={this.handleChange}
+                required
+              />
+            </label>
             <button type="submit">Submit</button>
           </form>
         ) : (
