@@ -21,8 +21,7 @@ const styles = (theme) => ({
     backgroundPosition: 'center',
   },
   info: {
-    backgroundColor: theme.palette.grey[900],
-    color: 'white',
+    backgroundColor: 'white',
   },
   paper: {
     margin: theme.spacing(5, 4),
