@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import GeneralInfo from './components/GeneralInfo';
 import EducationInfo from './components/EducationInfo';
@@ -32,10 +30,6 @@ const styles = (theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
 });
 
 export class App extends Component {
@@ -56,11 +50,7 @@ export class App extends Component {
           square
         >
           <div className={classes.paper}>
-            <Avatar className={classes.avatar} />
-            <Typography component="h1" variant="h5">
-              CV Project
-            </Typography>
-            <Grid container component="section" spacing={3}>
+            <Grid container component="section">
               <Grid item xs={12} sm={12} md={12}>
                 <GeneralInfo />
               </Grid>
@@ -71,10 +61,10 @@ export class App extends Component {
                 <WorkInfo />
               </Grid>
             </Grid>
+            <Box mt={5}>
+              <MadeBy />
+            </Box>
           </div>
-          <Box mt={5}>
-            <MadeBy />
-          </Box>
         </Grid>
       </Grid>
     );
