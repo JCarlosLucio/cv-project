@@ -41,11 +41,19 @@ export class WorkInfo extends Component {
     } = this.state;
     return (
       <div>
+        <h1>Work Experience</h1>
         {isEditing ? (
-          <WorkInfoForm />
+          <WorkInfoForm
+            company={company}
+            position={position}
+            tasks={tasks}
+            startDate={startDate}
+            endDate={endDate}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+          />
         ) : (
           <div>
-            <h1>Work Experience</h1>
             <p>{company}</p>
             <p>{position}</p>
             <p>{tasks}</p>
