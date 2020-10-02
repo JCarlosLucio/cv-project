@@ -6,9 +6,12 @@ import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 import GeneralInfo from './components/GeneralInfo';
 import EducationInfo from './components/EducationInfo';
 import WorkInfo from './components/WorkInfo';
+
+const styles = (theme) => ({});
 
 export class App extends Component {
   render() {
@@ -23,4 +26,4 @@ export class App extends Component {
   }
 }
 
-export default App;
+export default withStyles(styles, { withTheme: true })(App);
