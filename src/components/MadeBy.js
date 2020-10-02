@@ -4,7 +4,7 @@ import Link from '@material-ui/core/Link';
 
 function MadeBy() {
   return (
-    <Typography variant="body2" color="white" align="center">
+    <Typography variant="body2" align="center">
       {'By Lucio '}
       <Link color="inherit" href="https://github.com/JCarlosLucio/cv-project">
         GithubIcon
