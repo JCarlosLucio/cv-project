@@ -34,7 +34,13 @@ export class EducationInfo extends Component {
       <div>
         <h1>Education</h1>
         {isEditing ? (
-          <EducationInfoForm />
+          <EducationInfoForm
+            school={school}
+            title={title}
+            date={date}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+          />
         ) : (
           <div>
             <p>{school}</p>
