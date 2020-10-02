@@ -2,6 +2,24 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Avatar from '@material-ui/core/Avatar';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = (theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  container: {
+    margin: '1rem 0',
+  },
+});
 
 function GeneralInfoForm({
   fName,
@@ -10,10 +28,12 @@ function GeneralInfoForm({
   phone,
   handleChange,
   handleSubmit,
+  classes,
 }) {
   return (
-    <form onSubmit={handleSubmit}>
-      <Grid container spacing={3}>
+    <form onSubmit={handleSubmit} className={classes.root}>
+      <Avatar className={classes.avatar} />
+      <Grid container spacing={3} className={classes.container}>
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -22,6 +42,7 @@ function GeneralInfoForm({
             label="First name"
             value={fName}
             onChange={handleChange}
+            color="secondary"
             fullWidth
             autoComplete="given-name"
           />
@@ -34,6 +55,7 @@ function GeneralInfoForm({
             label="Last name"
             value={lName}
             onChange={handleChange}
+            color="secondary"
             fullWidth
             autoComplete="family-name"
           />
@@ -47,6 +69,7 @@ function GeneralInfoForm({
             label="Email"
             value={email}
             onChange={handleChange}
+            color="secondary"
             fullWidth
           />
         </Grid>
@@ -58,6 +81,7 @@ function GeneralInfoForm({
             label="Phone Number"
             value={phone}
             onChange={handleChange}
+            color="secondary"
             fullWidth
           />
         </Grid>
@@ -69,4 +93,4 @@ function GeneralInfoForm({
   );
 }
 
-export default GeneralInfoForm;
+export default withStyles(styles, { withTheme: true })(GeneralInfoForm);
