@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
 import GeneralInfoForm from './GeneralInfoForm';
+
+const styles = (theme) => ({});
 
 export class GeneralInfo extends Component {
   constructor(props) {
@@ -54,4 +57,4 @@ export class GeneralInfo extends Component {
   }
 }
 
-export default GeneralInfo;
+export default withStyles(styles, { withTheme: true })(GeneralInfo);
