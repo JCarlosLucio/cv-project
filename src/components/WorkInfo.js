@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import WorkInfoForm from './WorkInfoForm';
 
 export class WorkInfo extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       company: 'Papa Johns',
       position: 'Potato Specialist',
@@ -42,7 +42,7 @@ export class WorkInfo extends Component {
     return (
       <div>
         {isEditing ? (
-          <p>Editing</p>
+          <WorkInfoForm />
         ) : (
           <div>
             <h1>Work Experience</h1>
