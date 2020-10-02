@@ -9,7 +9,18 @@ export class EducationInfo extends Component {
       date: '2019',
       isEditing: false,
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleEdit = this.toggleEdit.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.toggleEdit();
   }
 
   toggleEdit() {
