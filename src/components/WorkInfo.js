@@ -12,6 +12,11 @@ export class WorkInfo extends Component {
       endDate: '03/2020',
       isEditing: false,
     };
+    this.toggleEdit = this.toggleEdit.bind(this);
+  }
+
+  toggleEdit() {
+    this.setState({ isEditing: !this.state.isEditing });
   }
 
   render() {
@@ -25,12 +30,19 @@ export class WorkInfo extends Component {
     } = this.state;
     return (
       <div>
-        <h1>Work Experience</h1>
-        <p>{company}</p>
-        <p>{position}</p>
-        <p>{tasks}</p>
-        <p>{startDate}</p>
-        <p>{endDate}</p>
+        {isEditing ? (
+          <p>Editing</p>
+        ) : (
+          <div>
+            <h1>Work Experience</h1>
+            <p>{company}</p>
+            <p>{position}</p>
+            <p>{tasks}</p>
+            <p>{startDate}</p>
+            <p>{endDate}</p>
+            <button onClick={this.toggleEdit}>Edit</button>
+          </div>
+        )}
       </div>
     );
   }
