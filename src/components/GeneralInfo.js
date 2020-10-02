@@ -2,7 +2,19 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GeneralInfoForm from './GeneralInfoForm';
 
-const styles = (theme) => ({});
+const styles = (theme) => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    margin: '2rem',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+});
 
 export class GeneralInfo extends Component {
   constructor(props) {
