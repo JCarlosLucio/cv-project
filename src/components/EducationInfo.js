@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EducationInfoForm from './EducationInfoForm';
 
 export class EducationInfo extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ export class EducationInfo extends Component {
       <div>
         <h1>Education</h1>
         {isEditing ? (
-          <p>Editing</p>
+          <EducationInfoForm />
         ) : (
           <div>
             <p>{school}</p>
