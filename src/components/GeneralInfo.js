@@ -22,7 +22,8 @@ export class GeneralInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fullName: 'John Smith',
+      fName: 'John',
+      lName: 'Smith',
       email: 'smith@email.com',
       phone: '01 800 123 4567',
       isEditing: false,
@@ -46,13 +47,14 @@ export class GeneralInfo extends Component {
   }
 
   render() {
-    const { fullName, email, phone, isEditing } = this.state;
+    const { fName, lName, email, phone, isEditing } = this.state;
     const { classes } = this.props;
     return (
       <React.Fragment>
         {isEditing ? (
           <GeneralInfoForm
-            fullName={fullName}
+            fName={fName}
+            lName={lName}
             email={email}
             phone={phone}
             handleChange={this.handleChange}
@@ -62,7 +64,7 @@ export class GeneralInfo extends Component {
           <div className={classes.root}>
             <Avatar className={classes.avatar} />
             <Typography component="h1" variant="h5" gutterBottom>
-              {fullName}
+              {fName} {lName}
             </Typography>
             <Typography gutterBottom>{email}</Typography>
             <Typography gutterBottom>{phone}</Typography>
