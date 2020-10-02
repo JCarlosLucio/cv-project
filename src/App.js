@@ -27,7 +27,7 @@ const styles = (theme) => ({
     color: 'white',
   },
   paper: {
-    margin: theme.spacing(8, 4),
+    margin: theme.spacing(5, 4),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -60,11 +60,17 @@ export class App extends Component {
             <Typography component="h1" variant="h5">
               CV Project
             </Typography>
-            <div>
-              <GeneralInfo />
-              <EducationInfo />
-              <WorkInfo />
-            </div>
+            <Grid container component="section" spacing={3}>
+              <Grid item xs={12} sm={12} md={12}>
+                <GeneralInfo />
+              </Grid>
+              <Grid item xs={12} sm={6} md={6}>
+                <EducationInfo />
+              </Grid>
+              <Grid item xs={12} sm={6} md={6}>
+                <WorkInfo />
+              </Grid>
+            </Grid>
           </div>
           <Box mt={5}>
             <MadeBy />
