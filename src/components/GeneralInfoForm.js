@@ -1,7 +1,11 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 function GeneralInfoForm({
-  fullName,
+  fName,
+  lName,
   email,
   phone,
   handleChange,
@@ -9,24 +13,58 @@ function GeneralInfoForm({
 }) {
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input
-          name="fullName"
-          value={fullName}
-          onChange={handleChange}
-          required
-        />
-      </label>
-      <label>
-        Email:
-        <input name="email" value={email} onChange={handleChange} required />
-      </label>
-      <label>
-        Phone Number:
-        <input name="phone" value={phone} onChange={handleChange} required />
-      </label>
-      <button type="submit">Submit</button>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="fName"
+            name="fName"
+            label="First name"
+            value={fName}
+            onChange={handleChange}
+            fullWidth
+            autoComplete="given-name"
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="lName"
+            name="lName"
+            label="Last name"
+            value={lName}
+            onChange={handleChange}
+            fullWidth
+            autoComplete="family-name"
+          />
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="email"
+            name="email"
+            label="Email"
+            value={email}
+            onChange={handleChange}
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="phone"
+            name="phone"
+            label="Phone Number"
+            value={phone}
+            onChange={handleChange}
+            fullWidth
+          />
+        </Grid>
+      </Grid>
+      <Button type="submit" variant="contained" color="secondary">
+        Submit
+      </Button>
     </form>
   );
 }
