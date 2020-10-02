@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import GeneralInfoForm from './GeneralInfoForm';
 
@@ -68,7 +69,13 @@ export class GeneralInfo extends Component {
             </Typography>
             <Typography gutterBottom>{email}</Typography>
             <Typography gutterBottom>{phone}</Typography>
-            <button onClick={this.toggleEdit}>Edit</button>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={this.toggleEdit}
+            >
+              Edit
+            </Button>
           </div>
         )}
       </React.Fragment>
