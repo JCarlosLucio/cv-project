@@ -1,4 +1,17 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container: {
+    margin: '1rem 0',
+  },
+};
 
 function EducationInfoForm({
   school,
@@ -26,4 +39,4 @@ function EducationInfoForm({
   );
 }
 
-export default EducationInfoForm;
+export default withStyles(styles)(EducationInfoForm);
