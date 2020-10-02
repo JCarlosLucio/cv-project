@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 import WorkInfoForm from './WorkInfoForm';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    flexDirection: 'column',
+    margin: '2rem',
+  },
+};
 
 export class WorkInfo extends Component {
   constructor(props) {
@@ -67,4 +78,4 @@ export class WorkInfo extends Component {
   }
 }
 
-export default WorkInfo;
+export default withStyles(styles, { withTheme: true })(WorkInfo);
