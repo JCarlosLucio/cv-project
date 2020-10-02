@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -10,6 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import GeneralInfo from './components/GeneralInfo';
 import EducationInfo from './components/EducationInfo';
 import WorkInfo from './components/WorkInfo';
+import MadeBy from './components/MadeBy';
 
 const styles = (theme) => ({
   root: {
@@ -67,17 +67,7 @@ export class App extends Component {
             </div>
           </div>
           <Box mt={5}>
-            <Typography variant="body2" color="white" align="center">
-              {'By Lucio '}
-              <Link
-                color="inherit"
-                href="https://github.com/JCarlosLucio/cv-project"
-              >
-                GithubIcon
-              </Link>{' '}
-              {new Date().getFullYear()}
-              {'.'}
-            </Typography>
+            <MadeBy />
           </Box>
         </Grid>
       </Grid>
