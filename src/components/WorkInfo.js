@@ -13,10 +13,21 @@ export class WorkInfo extends Component {
       isEditing: false,
     };
     this.toggleEdit = this.toggleEdit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   toggleEdit() {
     this.setState({ isEditing: !this.state.isEditing });
+  }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.toggleEdit();
   }
 
   render() {
