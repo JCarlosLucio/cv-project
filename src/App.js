@@ -40,13 +40,47 @@ const styles = (theme) => ({
 
 export class App extends Component {
   render() {
+    const { classes } = this.props;
     return (
-      <div>
-        <h1>CV PROJECT</h1>
-        <GeneralInfo />
-        <EducationInfo />
-        <WorkInfo />
-      </div>
+      <Grid container component="main" className={classes.root}>
+        <CssBaseline />
+        <Grid item xs={3} sm={4} md={5} className={classes.image} />
+        <Grid
+          item
+          xs={9}
+          sm={8}
+          md={7}
+          className={classes.info}
+          component={Paper}
+          elevation={6}
+          square
+        >
+          <div className={classes.paper}>
+            <Avatar className={classes.avatar} />
+            <Typography component="h1" variant="h5">
+              CV Project
+            </Typography>
+            <div>
+              <GeneralInfo />
+              <EducationInfo />
+              <WorkInfo />
+            </div>
+          </div>
+          <Box mt={5}>
+            <Typography variant="body2" color="white" align="center">
+              {'By Lucio '}
+              <Link
+                color="inherit"
+                href="https://github.com/JCarlosLucio/cv-project"
+              >
+                GithubIcon
+              </Link>{' '}
+              {new Date().getFullYear()}
+              {'.'}
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
     );
   }
 }
