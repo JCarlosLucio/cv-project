@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from '@material-ui/core/styles';
 import GeneralInfoForm from './GeneralInfoForm';
 
@@ -45,9 +47,9 @@ export class GeneralInfo extends Component {
 
   render() {
     const { fullName, email, phone, isEditing } = this.state;
+    const { classes } = this.props;
     return (
-      <div>
-        <h1>General Information</h1>
+      <React.Fragment>
         {isEditing ? (
           <GeneralInfoForm
             fullName={fullName}
@@ -57,14 +59,17 @@ export class GeneralInfo extends Component {
             handleSubmit={this.handleSubmit}
           />
         ) : (
-          <div>
-            <p>{fullName}</p>
-            <p>{email}</p>
-            <p>{phone}</p>
+          <div className={classes.root}>
+            <Avatar className={classes.avatar} />
+            <Typography component="h1" variant="h5" gutterBottom>
+              {fullName}
+            </Typography>
+            <Typography gutterBottom>{email}</Typography>
+            <Typography gutterBottom>{phone}</Typography>
             <button onClick={this.toggleEdit}>Edit</button>
           </div>
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
