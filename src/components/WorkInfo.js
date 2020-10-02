@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import WorkInfoForm from './WorkInfoForm';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import WorkInfoForm from './WorkInfoForm';
 
 const styles = {
   root: {
@@ -50,9 +52,9 @@ export class WorkInfo extends Component {
       endDate,
       isEditing,
     } = this.state;
+    const { classes } = this.props;
     return (
-      <div>
-        <h1>Work Experience</h1>
+      <React.Fragment>
         {isEditing ? (
           <WorkInfoForm
             company={company}
@@ -64,16 +66,26 @@ export class WorkInfo extends Component {
             handleSubmit={this.handleSubmit}
           />
         ) : (
-          <div>
-            <p>{company}</p>
-            <p>{position}</p>
-            <p>{tasks}</p>
-            <p>{startDate}</p>
-            <p>{endDate}</p>
-            <button onClick={this.toggleEdit}>Edit</button>
+          <div className={classes.root}>
+            <Typography component="h1" variant="h5" gutterBottom>
+              Experience
+            </Typography>
+            <Typography gutterBottom>{company}</Typography>
+            <Typography gutterBottom>{position}</Typography>
+            <Typography gutterBottom>{tasks}</Typography>
+            <Typography gutterBottom>
+              {startDate} - {endDate}
+            </Typography>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={this.toggleEdit}
+            >
+              Edit
+            </Button>
           </div>
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
