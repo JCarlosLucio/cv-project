@@ -90,4 +90,4 @@ export class WorkInfo extends Component {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(WorkInfo);
+export default withStyles(styles)(WorkInfo);

@@ -76,4 +76,4 @@ export class EducationInfo extends Component {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(EducationInfo);
+export default withStyles(styles)(EducationInfo);
