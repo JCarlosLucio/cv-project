@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import EducationInfoForm from './EducationInfoForm';
 
-const styles = {};
+const styles = {
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    flexDirection: 'column',
+    margin: '2rem',
+  },
+};
 
 export class EducationInfo extends Component {
   constructor(props) {
@@ -33,9 +43,9 @@ export class EducationInfo extends Component {
 
   render() {
     const { school, title, date, isEditing } = this.state;
+    const { classes } = this.props;
     return (
-      <div>
-        <h1>Education</h1>
+      <React.Fragment>
         {isEditing ? (
           <EducationInfoForm
             school={school}
@@ -45,14 +55,23 @@ export class EducationInfo extends Component {
             handleSubmit={this.handleSubmit}
           />
         ) : (
-          <div>
-            <p>{school}</p>
-            <p>{title}</p>
-            <p>{date}</p>
-            <button onClick={this.toggleEdit}>Edit</button>
+          <div className={classes.root}>
+            <Typography component="h1" variant="h5" gutterBottom>
+              Education
+            </Typography>
+            <Typography gutterBottom>{school}</Typography>
+            <Typography gutterBottom>{title}</Typography>
+            <Typography gutterBottom>{date}</Typography>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={this.toggleEdit}
+            >
+              Edit
+            </Button>
           </div>
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
