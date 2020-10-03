@@ -37,12 +37,12 @@ export class App extends Component {
     return (
       <Grid container component="main" className={classes.root}>
         <CssBaseline />
-        <Grid item xs={3} sm={3} md={3} className={classes.image} />
+        <Grid item xs={3} sm={4} md={5} className={classes.image} />
         <Grid
           item
           xs={9}
-          sm={9}
-          md={9}
+          sm={8}
+          md={7}
           className={classes.info}
           component={Paper}
           elevation={6}
