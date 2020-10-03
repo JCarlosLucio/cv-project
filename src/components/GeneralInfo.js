@@ -12,6 +12,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     flexDirection: 'column',
     margin: '2rem',
+    textAlign: 'center',
   },
   avatar: {
     margin: theme.spacing(1),
@@ -64,7 +65,7 @@ export class GeneralInfo extends Component {
         ) : (
           <div className={classes.root}>
             <Avatar className={classes.avatar} />
-            <Typography component="h1" variant="h5" gutterBottom>
+            <Typography component="h1" variant="h4" gutterBottom>
               {fName} {lName}
             </Typography>
             <Typography gutterBottom>{email}</Typography>

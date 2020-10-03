@@ -11,6 +11,7 @@ const styles = {
     alignItems: 'center',
     flexDirection: 'column',
     margin: '2rem',
+    textAlign: 'center',
   },
 };
 
