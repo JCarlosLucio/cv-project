@@ -10,8 +10,9 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    margin: '2rem',
+    margin: '2rem 1rem',
     textAlign: 'center',
+    maxWidth: '600px',
   },
 };
 
