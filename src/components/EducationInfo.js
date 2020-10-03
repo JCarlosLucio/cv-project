@@ -19,8 +19,8 @@ export class EducationInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      school: 'Harvard',
-      title: 'Chemical Engineering',
+      school: 'Massachusetts Institute of Technology',
+      title: 'Software Engineering',
       date: '2019',
       isEditing: false,
     };
