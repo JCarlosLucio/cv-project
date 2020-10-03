@@ -8,7 +8,7 @@ const styles = {
   root: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     flexDirection: 'column',
     margin: '2rem',
   },

@@ -9,7 +9,7 @@ const styles = {
   root: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
   },
   container: {
@@ -67,10 +67,10 @@ function EducationInfoForm({
             fullWidth
           />
         </Grid>
-        <Button type="submit" variant="contained" color="secondary">
-          Submit
-        </Button>
       </Grid>
+      <Button type="submit" variant="contained" color="secondary">
+        Submit
+      </Button>
     </form>
   );
 }
