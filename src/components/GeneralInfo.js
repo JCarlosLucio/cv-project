@@ -26,8 +26,8 @@ export class GeneralInfo extends Component {
     this.state = {
       fName: 'John',
       lName: 'Smith',
-      email: 'smith@email.com',
-      phone: '01 800 123 4567',
+      email: 'john.smith@email.com',
+      phone: '(620) 454-1799',
       isEditing: false,
     };
     this.toggleEdit = this.toggleEdit.bind(this);

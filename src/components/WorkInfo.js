@@ -19,9 +19,10 @@ export class WorkInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      company: 'Papa Johns',
-      position: 'Potato Specialist',
-      tasks: 'Write emails, Rate potatoes',
+      company: 'Dell Technologies',
+      position: 'Front-End Developer',
+      tasks:
+        'Determining the structure and design of web pages. Developing features to enhance the user experience. Ensuring web design is optimized for smartphones',
       startDate: '01/2017',
       endDate: '03/2020',
       isEditing: false,
@@ -72,11 +73,11 @@ export class WorkInfo extends Component {
               Experience
             </Typography>
             <Typography gutterBottom>{company}</Typography>
-            <Typography gutterBottom>{position}</Typography>
-            <Typography gutterBottom>{tasks}</Typography>
             <Typography gutterBottom>
               {startDate} - {endDate}
             </Typography>
+            <Typography gutterBottom>{position}</Typography>
+            <Typography gutterBottom>{tasks}</Typography>
             <Button
               variant="outlined"
               color="secondary"
