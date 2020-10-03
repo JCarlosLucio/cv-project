@@ -24,7 +24,7 @@ const styles = (theme) => ({
     backgroundColor: 'white',
   },
   paper: {
-    margin: theme.spacing(5, 4),
+    margin: theme.spacing(5, 0),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -48,22 +48,20 @@ export class App extends Component {
           elevation={6}
           square
         >
-          <div className={classes.paper}>
-            <Grid container component="section">
-              <Grid item xs={12} sm={12} md={12}>
-                <GeneralInfo />
-              </Grid>
-              <Grid item xs={12} sm={12} md={12}>
-                <EducationInfo />
-              </Grid>
-              <Grid item xs={12} sm={12} md={12}>
-                <WorkInfo />
-              </Grid>
+          <Grid container component="section" className={classes.paper}>
+            <Grid item xs={12} sm={12} md={12}>
+              <GeneralInfo />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12}>
+              <EducationInfo />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12}>
+              <WorkInfo />
             </Grid>
             <Box mt={5}>
               <MadeBy />
             </Box>
-          </div>
+          </Grid>
         </Grid>
       </Grid>
     );
