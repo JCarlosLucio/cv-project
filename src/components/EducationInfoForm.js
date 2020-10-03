@@ -1,15 +1,19 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   root: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
   container: {
-    margin: '1rem 0',
+    margin: '0 0 1rem 0',
   },
 };
 
@@ -19,22 +23,54 @@ function EducationInfoForm({
   date,
   handleChange,
   handleSubmit,
+  classes,
 }) {
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        School:
-        <input name="school" value={school} onChange={handleChange} required />
-      </label>
-      <label>
-        Title:
-        <input name="title" value={title} onChange={handleChange} required />
-      </label>
-      <label>
-        Date:
-        <input name="date" value={date} onChange={handleChange} required />
-      </label>
-      <button type="submit">Submit</button>
+    <form onSubmit={handleSubmit} className={classes.root}>
+      <Typography component="h1" variant="h5">
+        Edit Education
+      </Typography>
+      <Grid container spacing={3} className={classes.container}>
+        <Grid item xs={12} sm={12}>
+          <TextField
+            required
+            id="school"
+            name="school"
+            label="School"
+            value={school}
+            onChange={handleChange}
+            color="secondary"
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={8} sm={8}>
+          <TextField
+            required
+            id="title"
+            name="title"
+            label="Title"
+            value={title}
+            onChange={handleChange}
+            color="secondary"
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={4} sm={4}>
+          <TextField
+            required
+            id="date"
+            name="date"
+            label="Date"
+            value={date}
+            onChange={handleChange}
+            color="secondary"
+            fullWidth
+          />
+        </Grid>
+        <Button type="submit" variant="contained" color="secondary">
+          Submit
+        </Button>
+      </Grid>
     </form>
   );
 }
