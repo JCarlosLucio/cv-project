@@ -60,8 +60,9 @@ export class EducationInfo extends Component {
               Education
             </Typography>
             <Typography gutterBottom>{school}</Typography>
-            <Typography gutterBottom>{title}</Typography>
-            <Typography gutterBottom>{date}</Typography>
+            <Typography gutterBottom>
+              {title} - {date}
+            </Typography>
             <Button
               variant="outlined"
               color="secondary"
