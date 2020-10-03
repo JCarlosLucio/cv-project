@@ -1,4 +1,17 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  container: {
+    margin: '0 0 1rem 0',
+  },
+};
 
 function WorkInfoForm({
   company,
@@ -56,4 +69,4 @@ function WorkInfoForm({
   );
 }
 
-export default WorkInfoForm;
+export default withStyles(styles)(WorkInfoForm);
