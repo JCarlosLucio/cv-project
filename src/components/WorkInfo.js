@@ -80,6 +80,7 @@ export class WorkInfo extends Component {
             <Button
               variant="outlined"
               color="secondary"
+              size="small"
               onClick={this.toggleEdit}
             >
               Edit
