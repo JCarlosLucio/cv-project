@@ -53,10 +53,10 @@ export class App extends Component {
               <Grid item xs={12} sm={12} md={12}>
                 <GeneralInfo />
               </Grid>
-              <Grid item xs={12} sm={6} md={6}>
+              <Grid item xs={12} sm={12} md={12}>
                 <EducationInfo />
               </Grid>
-              <Grid item xs={12} sm={6} md={6}>
+              <Grid item xs={12} sm={12} md={12}>
                 <WorkInfo />
               </Grid>
             </Grid>
