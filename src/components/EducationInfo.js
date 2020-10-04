@@ -61,8 +61,11 @@ export class EducationInfo extends Component {
             <Typography component="h1" variant="h5" gutterBottom>
               Education
             </Typography>
+            <Typography variant="subtitle2">School</Typography>
             <Typography gutterBottom>{school}</Typography>
+            <Typography variant="subtitle2">Title of Study</Typography>
             <Typography gutterBottom>{title}</Typography>
+            <Typography variant="subtitle2">Class</Typography>
             <Typography gutterBottom>{date}</Typography>
             <Button
               variant="outlined"

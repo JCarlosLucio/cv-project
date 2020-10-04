@@ -73,11 +73,15 @@ export class WorkInfo extends Component {
             <Typography component="h1" variant="h5" gutterBottom>
               Experience
             </Typography>
+            <Typography variant="subtitle2">Company</Typography>
             <Typography gutterBottom>{company}</Typography>
+            <Typography variant="subtitle2">Start Date - End Date</Typography>
             <Typography gutterBottom>
               {startDate} - {endDate}
             </Typography>
+            <Typography variant="subtitle2">Position</Typography>
             <Typography gutterBottom>{position}</Typography>
+            <Typography variant="subtitle2">Tasks</Typography>
             <Typography gutterBottom>{tasks}</Typography>
             <Button
               variant="outlined"

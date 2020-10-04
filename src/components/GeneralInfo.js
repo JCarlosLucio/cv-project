@@ -69,7 +69,9 @@ export class GeneralInfo extends Component {
             <Typography component="h1" variant="h4" gutterBottom>
               {fName} {lName}
             </Typography>
+            <Typography variant="subtitle2">Email</Typography>
             <Typography gutterBottom>{email}</Typography>
+            <Typography variant="subtitle2">Phone Number</Typography>
             <Typography gutterBottom>{phone}</Typography>
             <Button
               variant="outlined"
