@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import EditIcon from '@material-ui/icons/Edit';
 import { withStyles } from '@material-ui/core/styles';
@@ -73,15 +73,13 @@ export class WorkInfo extends Component {
             <Typography gutterBottom>{position}</Typography>
             <Typography variant="subtitle2">Tasks</Typography>
             <Typography gutterBottom>{tasks}</Typography>
-            <Button
-              variant="outlined"
+            <IconButton
               color="secondary"
-              size="small"
               onClick={this.toggleEdit}
               className={classes.editBtn}
             >
               <EditIcon />
-            </Button>
+            </IconButton>
           </div>
         )}
       </React.Fragment>
