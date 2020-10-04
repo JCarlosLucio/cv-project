@@ -24,7 +24,7 @@ const styles = (theme) => ({
     backgroundColor: 'white',
   },
   paper: {
-    margin: theme.spacing(5, 0),
+    margin: theme.spacing(1, 0),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
