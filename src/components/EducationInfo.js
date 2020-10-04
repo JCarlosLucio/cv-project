@@ -61,6 +61,7 @@ export class EducationInfo extends Component {
               color="secondary"
               size="small"
               onClick={this.toggleEdit}
+              className={classes.editBtn}
             >
               Edit
             </Button>
