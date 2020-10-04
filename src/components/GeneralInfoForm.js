@@ -11,6 +11,8 @@ const styles = (theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: '2rem 1rem 0 1rem',
+    maxWidth: '600px',
   },
   avatar: {
     margin: theme.spacing(1),
