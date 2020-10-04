@@ -21,6 +21,7 @@ const styles = (theme) => ({
     top: 0,
     right: 0,
     zIndex: 10,
+    border: '1px solid #F50057',
     opacity: 0,
     transition: 'all 0.3s ease-in-out',
   },
