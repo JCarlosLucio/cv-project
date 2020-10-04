@@ -4,24 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from '@material-ui/core/styles';
-
-const styles = (theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: '2rem 1rem 2.2rem 1rem',
-    maxWidth: '600px',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  container: {
-    margin: '0',
-  },
-});
+import styles from '../styles/GeneralInfoFormStyles';
 
 function GeneralInfoForm({
   fName,

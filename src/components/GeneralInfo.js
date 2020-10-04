@@ -4,22 +4,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import GeneralInfoForm from './GeneralInfoForm';
-
-const styles = (theme) => ({
-  root: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    margin: '2rem 1rem 1.4rem 1rem',
-    textAlign: 'center',
-    maxWidth: '600px',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-});
+import styles from '../styles/GeneralInfoStyles';
 
 export class GeneralInfo extends Component {
   constructor(props) {

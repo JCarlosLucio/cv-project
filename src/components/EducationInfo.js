@@ -3,18 +3,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import EducationInfoForm from './EducationInfoForm';
-
-const styles = {
-  root: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    margin: '0 1rem 2rem 1rem',
-    textAlign: 'center',
-    maxWidth: '600px',
-  },
-};
+import styles from '../styles/EducationInfoStyles';
 
 export class EducationInfo extends Component {
   constructor(props) {

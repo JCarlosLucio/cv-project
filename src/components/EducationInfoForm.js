@@ -4,20 +4,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-
-const styles = {
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: '0rem 1rem 2.2rem 1rem',
-    maxWidth: '600px',
-  },
-  container: {
-    margin: '0 0 1rem 0',
-  },
-};
+import styles from '../styles/EducationInfoFormStyles';
 
 function EducationInfoForm({
   school,
