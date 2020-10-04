@@ -11,7 +11,7 @@ const styles = (theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '2rem 1rem 0 1rem',
+    margin: '2rem 1rem 2.2rem 1rem',
     maxWidth: '600px',
   },
   avatar: {
@@ -19,7 +19,7 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   container: {
-    margin: '1rem 0',
+    margin: '0',
   },
 });
 
@@ -88,7 +88,7 @@ function GeneralInfoForm({
           />
         </Grid>
       </Grid>
-      <Button type="submit" variant="contained" color="secondary">
+      <Button type="submit" variant="contained" color="secondary" size="small">
         Submit
       </Button>
     </form>

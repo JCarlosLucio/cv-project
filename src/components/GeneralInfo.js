@@ -11,7 +11,7 @@ const styles = (theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    margin: '2rem 1rem',
+    margin: '2rem 1rem 1.4rem 1rem',
     textAlign: 'center',
     maxWidth: '600px',
   },

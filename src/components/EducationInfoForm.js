@@ -11,7 +11,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '2rem 1rem 0 1rem',
+    margin: '0rem 1rem 2.2rem 1rem',
     maxWidth: '600px',
   },
   container: {
@@ -70,7 +70,7 @@ function EducationInfoForm({
           />
         </Grid>
       </Grid>
-      <Button type="submit" variant="contained" color="secondary">
+      <Button type="submit" variant="contained" color="secondary" size="small">
         Submit
       </Button>
     </form>
