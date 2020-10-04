@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import EditIcon from '@material-ui/icons/Edit';
 import { withStyles } from '@material-ui/core/styles';
 import WorkInfoForm from './WorkInfoForm';
 import styles from '../styles/WorkInfoStyles';
@@ -79,7 +80,7 @@ export class WorkInfo extends Component {
               onClick={this.toggleEdit}
               className={classes.editBtn}
             >
-              Edit
+              <EditIcon />
             </Button>
           </div>
         )}

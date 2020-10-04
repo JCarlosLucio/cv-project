@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
+import EditIcon from '@material-ui/icons/Edit';
 import { withStyles } from '@material-ui/core/styles';
 import GeneralInfoForm from './GeneralInfoForm';
 import styles from '../styles/GeneralInfoStyles';
@@ -65,7 +66,7 @@ export class GeneralInfo extends Component {
               onClick={this.toggleEdit}
               className={classes.editBtn}
             >
-              Edit
+              <EditIcon />
             </Button>
           </div>
         )}
