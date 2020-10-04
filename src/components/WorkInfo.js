@@ -75,6 +75,7 @@ export class WorkInfo extends Component {
             <Typography gutterBottom>{tasks}</Typography>
             <IconButton
               color="secondary"
+              size="small"
               onClick={this.toggleEdit}
               className={classes.editBtn}
             >

@@ -59,6 +59,7 @@ export class EducationInfo extends Component {
             <Typography gutterBottom>{date}</Typography>
             <IconButton
               color="secondary"
+              size="small"
               onClick={this.toggleEdit}
               className={classes.editBtn}
             >

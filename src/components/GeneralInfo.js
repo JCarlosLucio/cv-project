@@ -61,6 +61,7 @@ export class GeneralInfo extends Component {
             <Typography gutterBottom>{phone}</Typography>
             <IconButton
               color="secondary"
+              size="small"
               onClick={this.toggleEdit}
               className={classes.editBtn}
             >
