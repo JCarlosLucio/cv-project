@@ -48,15 +48,15 @@ export class EducationInfo extends Component {
           />
         ) : (
           <div className={classes.root}>
-            <Typography component="h1" variant="h5" gutterBottom>
+            <Typography component="h1" variant="h5">
               Education
             </Typography>
             <Typography variant="subtitle2">School</Typography>
-            <Typography gutterBottom>{school}</Typography>
+            <Typography>{school}</Typography>
             <Typography variant="subtitle2">Title of Study</Typography>
-            <Typography gutterBottom>{title}</Typography>
+            <Typography>{title}</Typography>
             <Typography variant="subtitle2">Class</Typography>
-            <Typography gutterBottom>{date}</Typography>
+            <Typography>{date}</Typography>
             <IconButton
               color="secondary"
               size="small"

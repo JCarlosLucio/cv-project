@@ -5,9 +5,15 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    margin: '0 1rem 2rem 1rem',
+    margin: '0 1rem 1rem 1rem',
     textAlign: 'center',
     maxWidth: '600px',
+    '& h1': {
+      marginBottom: '1rem',
+    },
+    '& p': {
+      marginBottom: '1rem',
+    },
     '&:hover $editBtn': {
       opacity: 1,
     },

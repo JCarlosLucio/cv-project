@@ -4,7 +4,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '0rem 1rem 2.2rem 1rem',
+    margin: '0rem 1rem 1.7rem 1rem',
     maxWidth: '600px',
   },
   container: {
