@@ -37,7 +37,7 @@ export class App extends Component {
             <Grid item xs={12} sm={12} md={12}>
               <WorkInfo />
             </Grid>
-            <Box mt={3}>
+            <Box mt={0}>
               <MadeBy />
             </Box>
           </Grid>
