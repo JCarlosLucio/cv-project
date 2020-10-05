@@ -8,6 +8,12 @@ const styles = {
     margin: '0 1rem',
     textAlign: 'center',
     maxWidth: '600px',
+    '& h1': {
+      marginBottom: '1rem',
+    },
+    '& p': {
+      marginBottom: '1rem',
+    },
     '&:hover $editBtn': {
       opacity: 1,
     },

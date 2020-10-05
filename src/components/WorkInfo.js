@@ -60,19 +60,19 @@ export class WorkInfo extends Component {
           />
         ) : (
           <div className={classes.root}>
-            <Typography component="h1" variant="h5" gutterBottom>
+            <Typography component="h1" variant="h5">
               Experience
             </Typography>
             <Typography variant="subtitle2">Company</Typography>
-            <Typography gutterBottom>{company}</Typography>
+            <Typography>{company}</Typography>
             <Typography variant="subtitle2">Start Date - End Date</Typography>
-            <Typography gutterBottom>
+            <Typography>
               {startDate} - {endDate}
             </Typography>
             <Typography variant="subtitle2">Position</Typography>
-            <Typography gutterBottom>{position}</Typography>
+            <Typography>{position}</Typography>
             <Typography variant="subtitle2">Tasks</Typography>
-            <Typography gutterBottom>{tasks}</Typography>
+            <Typography>{tasks}</Typography>
             <IconButton
               color="secondary"
               size="small"
