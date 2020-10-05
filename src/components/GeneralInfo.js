@@ -52,13 +52,13 @@ export class GeneralInfo extends Component {
         ) : (
           <div className={classes.root}>
             <Avatar className={classes.avatar} />
-            <Typography component="h1" variant="h4" gutterBottom>
+            <Typography component="h1" variant="h4">
               {fName} {lName}
             </Typography>
             <Typography variant="subtitle2">Email</Typography>
-            <Typography gutterBottom>{email}</Typography>
+            <Typography>{email}</Typography>
             <Typography variant="subtitle2">Phone Number</Typography>
-            <Typography gutterBottom>{phone}</Typography>
+            <Typography>{phone}</Typography>
             <IconButton
               color="secondary"
               size="small"
