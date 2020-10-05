@@ -7,6 +7,7 @@ const styles = (theme) => ({
     flexDirection: 'column',
     margin: '2rem 1rem 1rem 1rem',
     textAlign: 'center',
+    minWidth: '120px',
     maxWidth: '600px',
     '& h1': {
       marginBottom: '1rem',

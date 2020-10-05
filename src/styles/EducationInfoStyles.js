@@ -7,6 +7,7 @@ const styles = {
     flexDirection: 'column',
     margin: '0 1rem 1rem 1rem',
     textAlign: 'center',
+    minWidth: '190px',
     maxWidth: '600px',
     '& h1': {
       marginBottom: '1rem',
